@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import { Outlet } from 'react-router';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       <div className='App-body'>
         <div className='body-margin'/>
         <div className='body-main'>
-          Still a work in progress!
+          <Outlet />
         </div>
         <div className='body-margin'/>
       </div>

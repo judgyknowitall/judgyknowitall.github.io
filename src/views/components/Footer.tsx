@@ -10,7 +10,7 @@ const socialMedia = [
 ];
 
 const socialMediaItems = socialMedia.map(media =>
-  <a className="tooltip" href={media.link}>
+  <a className="tooltip" href={media.link} key={media.link}>
     <img src={media.img} className="socialmedialogo" alt={media.alt} />
     <span className="tooltiptext">{media.alt}</span>
   </a>

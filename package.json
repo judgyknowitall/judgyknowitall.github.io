@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "homepage": "https://judgyknowitall.github.io",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
@@ -11,18 +12,22 @@
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react-swc": "^3.7.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1",
+    "react-router": "^7.1.1",
     "typescript": "^4.9.5",
+    "vite": "^6.0.6",
+    "vite-plugin-svgr": "^4.3.0",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "craco eject",
-    "predeploy": "craco build",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --watch=false",
+    "predeploy": "tsc && vite build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -44,8 +49,11 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@vitest/coverage-v8": "^2.1.8",
     "gh-pages": "^6.2.0",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "jsdom": "^25.0.1",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8"
   }
 }

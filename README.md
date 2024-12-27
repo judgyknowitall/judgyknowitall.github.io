@@ -8,6 +8,7 @@ Go to https://judgyknowitall.github.io/ to view website.
 - [GitHub Pages with React](https://github.com/gitname/react-gh-pages)
 - [Vector Icons](https://www.svgrepo.com/vectors)
 - [CSS](https://www.w3schools.com/css)
+- [React Router](https://reactrouter.com/home)
 
 ---
 
@@ -17,9 +18,11 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 - Fixed Styling of the header.
 - Updated window name and icon.
-
+- Moved from create-react to vite and vitest.
+- Added basic navigation.
 TODO:
 - [tic-tac-toe game](https://react.dev/learn/tutorial-tic-tac-toe).
+- Flesh out existing pages.
 
 ## Dec 22, 2024
 

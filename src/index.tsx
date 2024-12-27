@@ -1,17 +1,26 @@
-import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './views/App';
+import { BrowserRouter, Route, Routes } from "react-router";
 import reportWebVitals from './reportWebVitals';
+import WelcomePage from './views/pages/WelcomePage';
+import NotFoundPage from './views/pages/NotFoundPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={ <App/> }>
+        <Route index element={ <WelcomePage/> }/>
+        <Route path="welcome" element={ <WelcomePage/> }/>
+
+        <Route path="*" element={<NotFoundPage/>}/>
+      </Route>
+    </Routes>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
