@@ -13,7 +13,15 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
-## Dec 22, 2022
+## Dec 27, 2024
+
+- Fixed Styling of the header.
+- Updated window name and icon.
+
+TODO:
+- [tic-tac-toe game](https://react.dev/learn/tutorial-tic-tac-toe).
+
+## Dec 22, 2024
 
 - Updated Packages. Had to update web-vitals as a result.
 - Going through [Learn React](https://react.dev/learn)

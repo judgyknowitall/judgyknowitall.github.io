@@ -10,6 +10,7 @@ function Header() {
         <div className="title">
             Home
         </div>
+        <div className="spacer"/>
       </div>
     );
   }
