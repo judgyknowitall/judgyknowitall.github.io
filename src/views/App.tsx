@@ -3,17 +3,18 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { Outlet } from 'react-router';
+import PageProps from '@/models/PageProps';
 
-function App() {
+function App({pageProps} : {pageProps: PageProps}) {
 
   useEffect(() => {
     document.title = "JudgyKnowitall";
   }, []);
 
   return (
-    <div className="App">
-      <Header/>
-      <div className='App-body'>
+    <div className="app">
+      <Header title={pageProps.title}/>
+      <div className='app-body'>
         <div className='body-margin'/>
         <div className='body-main'>
           <Outlet />

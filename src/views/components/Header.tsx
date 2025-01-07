@@ -1,8 +1,8 @@
-import { Link, NavLink } from 'react-router';
+import { Link } from 'react-router';
 import './Header.css'
 import logo from '@/assets/react-logo.svg';
 
-function Header() {
+function Header({title}: {title: string}) {
     return (
       <div className="Header">
         <Link to="/">
@@ -11,7 +11,7 @@ function Header() {
           </div>
         </Link>
         <div className="title">
-            Home
+            {title}
         </div>
         <div className="spacer"/>
       </div>

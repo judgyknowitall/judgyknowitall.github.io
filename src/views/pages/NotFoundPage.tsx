@@ -1,9 +1,13 @@
-import './NotFoundPage.css'
+import PageProps from '@/models/PageProps';
+import './NotFoundPage.css';
 
-function NotFoundPage() {
+function NotFoundPage({pageProps} : {pageProps: PageProps}) {
+  pageProps.setTitle("404")
+
     return (
       <div>
-        Not FOUND!!!
+        <h1>404</h1>
+        Page not found :(
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import { Metric, ReportOpts } from 'web-vitals';
 
 function sendAttributionData(metric: Metric) {
-  console.log(JSON.stringify(metric));
+  //console.log(JSON.stringify(metric));
   // Send Results To Analytics from here
   // https://create-react-app.dev/docs/measuring-performance/
 }

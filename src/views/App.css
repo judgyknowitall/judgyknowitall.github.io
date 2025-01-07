@@ -1,11 +1,11 @@
-.App {
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: #fed7b0;
 }
 
-.App-body {
+.app-body {
   flex: 1 1 0;
   font-size: calc(10px + 2vmin);
   color: #282c34;
@@ -15,18 +15,16 @@
 }
 
 .body-main {
-  flex-grow: 3;
-  flex-shrink: 1;
   padding: 50px;
   margin: 50px;
+  width: 60%;
   background-color: white;
 }
 
 .body-margin {
-  flex-grow: 1;
-  flex-shrink: 3;
+  width: 20%;
 }
 
-.App-link {
+li {
   color: #61dafb;
 }

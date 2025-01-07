@@ -14,6 +14,15 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
+## Jan 6, 2025
+
+- Added a few more pages and routing to the tic-tac-toe page
+- Started on the Tic-tac-toe page
+TODO:
+- [Finish tic-tac-toe](https://react.dev/learn/tutorial-tic-tac-toe#why-immutability-is-important)
+- [State Handling?] (https://stackoverflow.com/questions/37788342/is-it-better-to-define-state-in-constructor-or-using-property-initializers)
+- [Read learn docs](https://react.dev/learn/describing-the-ui)
+
 ## Dec 27, 2024
 
 - Fixed Styling of the header.
