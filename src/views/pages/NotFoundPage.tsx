@@ -1,8 +1,11 @@
 import PageProps from '@/models/PageProps';
 import './NotFoundPage.css';
+import { useEffect } from 'react';
 
 function NotFoundPage({pageProps} : {pageProps: PageProps}) {
-  pageProps.setTitle("404")
+  useEffect(() => {
+    pageProps.onPageChanged("404");
+  })
 
     return (
       <div>

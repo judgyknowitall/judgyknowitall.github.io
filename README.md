@@ -14,13 +14,26 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
+## Jan 15, 2025
+
+- Using Effects instead of lifecycles for setting the titles.
+- Finished Tic-Tac-Toe
+
+TODO:
+- Go through Tic-Tac-Toe improvements
+- Update styling for Tic-Tac-Toe
+- [Read learn docs](https://react.dev/learn/describing-the-ui)
+- Start on the Navigator
+- Research how to set design for mobile vs. web views?
+
 ## Jan 6, 2025
 
 - Added a few more pages and routing to the tic-tac-toe page
 - Started on the Tic-tac-toe page
+
 TODO:
 - [Finish tic-tac-toe](https://react.dev/learn/tutorial-tic-tac-toe#why-immutability-is-important)
-- [State Handling?] (https://stackoverflow.com/questions/37788342/is-it-better-to-define-state-in-constructor-or-using-property-initializers)
+- [State Handling?](https://stackoverflow.com/questions/37788342/is-it-better-to-define-state-in-constructor-or-using-property-initializers)
 - [Read learn docs](https://react.dev/learn/describing-the-ui)
 
 ## Dec 27, 2024
@@ -29,6 +42,7 @@ TODO:
 - Updated window name and icon.
 - Moved from create-react to vite and vitest.
 - Added basic navigation.
+
 TODO:
 - [tic-tac-toe game](https://react.dev/learn/tutorial-tic-tac-toe).
 - Flesh out existing pages.
@@ -38,6 +52,7 @@ TODO:
 - Updated Packages. Had to update web-vitals as a result.
 - Going through [Learn React](https://react.dev/learn)
 - Added styling to the main page.
+
 TODO:
 - Add navigation
 - Not Found and WIP pages
