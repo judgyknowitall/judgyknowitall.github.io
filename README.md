@@ -14,6 +14,31 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
+## Feb 15, 2025
+
+- Happy enough with the Header style for now.
+- Added menu animation and collapse/expansion logic.
+
+TODO:
+- Navigator styling
+- Test on mobile
+- Go through Tic-Tac-Toe improvements
+- Update styling for Tic-Tac-Toe
+- [Read learn docs](https://react.dev/learn/describing-the-ui)
+
+## Jan 29, 2025
+
+- Added a new effect for detecting whether the window is in portrait mode.
+- Changed styles based on portrait mode.
+
+TODO:
+- Still working on Header style. Flex-wrap needs tweaking
+- Go through Tic-Tac-Toe improvements
+- Update styling for Tic-Tac-Toe
+- [Read learn docs](https://react.dev/learn/describing-the-ui)
+- Start on the Navigator
+
+
 ## Jan 15, 2025
 
 - Using Effects instead of lifecycles for setting the titles.

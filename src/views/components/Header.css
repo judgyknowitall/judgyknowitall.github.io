@@ -1,53 +1,100 @@
 :root {
   --circleDiameter: 100px;
   --circleMargin: 10px;
+  --menuItemDiameter: 80px;
+  --menuItemMargin: 2px;
 }
 
 .Header {
-    text-align: center;
-    vertical-align: top;
-    min-height: 15vh;
-    display: flex;
-    flex-direction: row;
+  text-align: center;
+  vertical-align: top;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .title {
-    flex-grow: 1;
-    justify-self: center;
-    align-self: end;
-    text-align: center;
-    color:white;
-    font-size: 50px;
-    font-weight: bold;
+  flex-grow: 1;
+  align-self: end;
+  text-align: center;
+  color:white;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .spacer {
   flex-grow: 0;
-  height: var(--circleDiameter);
+  height: 0px;
   width: var(--circleDiameter);
-  margin: var(--circleMargin);
+  margin: 0px var(--circleMargin);
 }
 
 .menu-circle {
-    flex-grow: 0;
-    height: var(--circleDiameter);
-    width: var(--circleDiameter);
-    margin: var(--circleMargin);
-    background-color: white;
-    border-radius: 50%;
-    z-index: 0;
+  flex-grow: 0;
+  height: var(--circleDiameter);
+  width: var(--circleDiameter);
+  margin: var(--circleMargin);
+  background-color: white;
+  border-radius: 50%;
 }
 
 .menu-logo {
-  height: 90px;
+  height: var(--circleDiameter) - 10px;
   pointer-events: none;
   margin: 5px -15px;
   z-index: 1;
   filter: grayscale(100%) invert(100%);
 }
 
+.menu {
+  min-width: var(--circleDiameter);
+  min-height: var(--circleDiameter);
+  width: var(--circleDiameter);
+  height: var(--circleDiameter);
+  margin: var(--circleMargin);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.menu:hover, 
+.menu.expand {
+  height:500px;
+  opacity: 1;
+}
+
+.menu-item {
+  background-color: white;
+  border-radius: 50%;
+  margin: var(--menuItemMargin);
+  width: var(--menuItemDiameter);
+  height: 0px;
+  align-content: center;
+  text-align: center;
+  transition: all 0.5s;
+}
+.menu.expand .menu-item,
+.menu:hover .menu-item {
+  height: var(--menuItemDiameter);
+}
+
+.menu-item.first {
+  width: var(--circleDiameter) !important;
+  height: var(--circleDiameter) !important;
+  opacity: 0;
+}
+
+/*********************
+  Rotation Animation
+**********************/
+
 @media (prefers-reduced-motion: no-preference) {
-    .menu-logo {
+  .menu-logo {
     animation: menu-logo-spin infinite 20s linear;
   }
 }

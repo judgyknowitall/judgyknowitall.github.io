@@ -113,7 +113,7 @@ function TicTacToePage({pageProps} : {pageProps: PageProps}) {
         <GameBoard xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay}/>
       </div>
       <div className="game-info">
-        <GameHistory history={history}  onJump={handleTimeJump}/>
+        <GameHistory history={history} onJump={handleTimeJump}/>
       </div>
     </div>
   );

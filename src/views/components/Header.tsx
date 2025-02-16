@@ -2,20 +2,52 @@ import { Link } from 'react-router';
 import './Header.css'
 import logo from '@/assets/react-logo.svg';
 
-function Header({title}: {title: string}) {
-    return (
-      <div className="Header">
-        <Link to="/">
-          <div className="menu-circle">
-              <img src={logo} className="menu-logo" alt="logo" />
-          </div>
-        </Link>
-        <div className="title">
-            {title}
-        </div>
-        <div className="spacer"/>
-      </div>
-    );
+// Renders the App header
+function Header({title, menuExpanded, onMenuExpanded}: HeaderProps) {
+
+  function handleExpandMenu() {
+    onMenuExpanded(true);
   }
-    
-  export default Header;
+  function handleCollapseMenu() {
+    onMenuExpanded(false);
+  }
+
+  return (
+    <div>
+      <div className="Header" onClick={handleCollapseMenu}>
+        <div className="menu-circle">
+          <img src={logo} className="menu-logo" alt="logo" />
+        </div>
+        <div className="title">
+          {title}
+        </div>
+        <div id='headerSpacer' className="spacer"/>
+      </div>
+
+      <div className={'menu' + (menuExpanded ? ' expand' : '')}>
+          <div 
+            className='menu-circle menu-item first' 
+            onClick={handleExpandMenu}
+          />
+          <Link to="/">
+            <div className='menu-item'>Home</div>
+          </Link>
+          <Link to="/games/tictactoe">
+            <div className='menu-item'>TicTacToe</div>
+          </Link>
+          <Link to="/uxdesign/familyscheduler">
+            <div className='menu-item'> Family Scheduler</div>
+          </Link>
+      </div>
+    </div>
+  );
+}
+
+// Page Props
+interface HeaderProps {
+  title: string, 
+  menuExpanded: boolean,
+  onMenuExpanded: (menuExpanded: boolean) => void
+}
+
+export default Header;

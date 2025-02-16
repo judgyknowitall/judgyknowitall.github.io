@@ -28,3 +28,15 @@
 li {
   color: #61dafb;
 }
+
+/* Portrait mode styles */
+
+.body-main.portrait {
+  padding: 5%;
+  margin: 5% 0px 0px 0px;
+  width: 80%;
+}
+
+.body-margin.portrait {
+  width: 5%;
+}
