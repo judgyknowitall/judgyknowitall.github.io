@@ -1,8 +1,14 @@
+:root {
+  --text-colour: rgb(27, 26, 26);
+  --primary-colour: #fed7b0;
+  --secondary-colour: rgb(175, 142, 208);
+}
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #fed7b0;
+  background-color: var(--primary-colour);
 }
 
 .app-body {
@@ -26,7 +32,7 @@
 }
 
 li {
-  color: #61dafb;
+  color: var(--secondary-colour);
 }
 
 /* Portrait mode styles */

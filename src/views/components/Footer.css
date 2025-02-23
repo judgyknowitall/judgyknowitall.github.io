@@ -1,6 +1,6 @@
 .Footer {
     text-align: center;
-    background-color: rgb(175, 142, 208);
+    background-color: var(--secondary-colour);
 }
 
 .socialmedialogo {

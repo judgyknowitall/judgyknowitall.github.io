@@ -1,3 +1,24 @@
+.game {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/**************************************
+Game Board
+**************************************/
+
+.status {
+    margin-bottom: 10px;
+}
+
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+}
 
 .square {
     border: 2px solid #999;
@@ -11,21 +32,35 @@
     width: 52px;
 }
 
-.board-row:after {
-    clear: both;
-    content: '';
-    display: table;
-}
+/**************************************
+Game History
+**************************************/
 
-.status {
-    margin-bottom: 10px;
-}
-
-.game {
+.game-history-sort {
     display: flex;
-    flex-direction: row;
+    justify-content: start;
+    color: var(--secondary-colour)
+}
+.game-history-sort > svg {
+    color: var(--secondary-colour);
+    align-self: flex-end;
+    padding: 5px;
+    font-size: 80%;
+}
+.game-history-sort ~ ol {
+    margin-block-start: 0.5em;
 }
 
-.game-info {
-    margin-left: 20px;
+.game-history-move  {
+    color: var(--text-colour);
+    font-size: 90%;
+}
+
+button.game-history-move  {
+    align-self: center;
+    color: white;
+    background-color: var(--secondary-colour);
+    border-radius: 5px;
+    border-width: 0px;
+    font-size: 80%;
 }

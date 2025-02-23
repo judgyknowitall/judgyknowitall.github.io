@@ -1,16 +1,13 @@
 import PageProps from '@/models/PageProps';
 import { useEffect, useState } from 'react';
+import { FaAngleUp, FaAngleDown } from "react-icons/fa6";
 import './TicTacToePage.css';
 
 /// FUTURE IMPROVEMENTS
-// - For the current move only, show “You are at move #…” instead of a button.
-// - Rewrite Board to use two loops to make the squares instead of hardcoding them.
-// - Add a toggle button that lets you sort the moves in either ascending or descending order.
 // - When someone wins, highlight the three squares that caused the win (and when no one wins, display a message about the result being a draw).
 // - Display the location for each move in the format (row, col) in the move history list.
 
 // Square Component
-//Props => {value}: {value: number}
 function Square({value, onSquareClick}: SquareProps) {
     return (
         <button className="square" onClick={onSquareClick}>
@@ -39,47 +36,78 @@ function GameBoard({xIsNext, squares, onPlay}: BoardProps) {
     onPlay(nextSquares);
   }
 
+  // Each row in the board consisting of 3 squares.
+  const squareRow = (row: number) => {
+    let content = [];
+    for (let col = 0; col < 3; col++) {
+      const squareNum = (row*3) + col;
+      content.push(
+        <Square 
+          key={squareNum}
+          value={squares[squareNum]} 
+          onSquareClick={() => handleClick(squareNum)} />
+      );
+    }
+    return content;
+  }
+
+  // The board as 3 square rows
+  const squareRows = () => {
+    let content = [];
+    for (let row = 0; row < 3; row++) {
+      content.push(<div className="board-row" key={row}>{ squareRow(row) }</div>);
+    }
+    return content;
+  };
+
   return (
     <>
       <div className='status'>{status}</div>
-      <div className="board-row">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="board-row">
-        <Square value={squares[3]} onSquareClick={() => handleClick(3)}/>
-        <Square value={squares[4]} onSquareClick={() => handleClick(4)}/>
-        <Square value={squares[5]} onSquareClick={() => handleClick(5)}/>
-      </div>
-      <div className="board-row">
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)}/>
-        <Square value={squares[7]} onSquareClick={() => handleClick(7)}/>
-        <Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
-      </div>
+      { squareRows() }
     </>
   );
 }
 
 // Game History Component
-function GameHistory({history, onJump}: HistoryProps) {
+function GameHistory({currentMove, history, onJump}: HistoryProps) {
 
-  const moves = history.map((_, move) => {
+  const [isOrderReversed, setOrderReversed] = useState(false);
+
+  // View for the current move
+  const currentMoveView = (
+    <div className='game-history-move'>{'You are at move #' + (currentMove+1)}</div>
+  );
+
+  // View for a move in the past
+  const pastMoveView = (move: number) => {
     let description;
     if (move > 0) description = 'Go to move #' + move;
     else description = 'Go to game start';
 
     return (
+      <button className='game-history-move' onClick={() => onJump(move)}>
+        {description}
+      </button>
+    )
+  };
+
+  // View for the list of moves
+  const moveListView = history.map((_, move) => {
+    return (
       <li key={move}>
-        <button onClick={() => onJump(move)}>
-          {description}
-        </button>
+        {move == currentMove ? currentMoveView : pastMoveView(move)}
       </li>
     )
   });
 
   return (
-    <ol>{moves}</ol>
+    <>
+      <div className='game-history-sort' onClick={() => setOrderReversed(!isOrderReversed)}>
+        {'Game History'}
+        { isOrderReversed? <FaAngleUp/> : <FaAngleDown/> }
+      </div>
+      <ol>{ isOrderReversed ? moveListView.reverse() : moveListView }</ol>
+    </>
   )
 }
 
@@ -112,8 +140,8 @@ function TicTacToePage({pageProps} : {pageProps: PageProps}) {
       <div className='game-board'>
         <GameBoard xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay}/>
       </div>
-      <div className="game-info">
-        <GameHistory history={history} onJump={handleTimeJump}/>
+      <div className="game-history">
+        <GameHistory currentMove={currentMove} history={history} onJump={handleTimeJump}/>
       </div>
     </div>
   );
@@ -151,6 +179,7 @@ interface BoardProps {
   onPlay: (nextSquares: string[]) => void
 };
 interface HistoryProps {
+  currentMove: number,
   history: string[][],
   onJump: (nextMove: number) => void
 };

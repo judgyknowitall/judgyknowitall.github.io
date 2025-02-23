@@ -14,6 +14,17 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
+## Feb 23, 2025
+
+- Worked on some of the Tic-Tac-Toe improvements
+- Improved Tic-Tac-Toe page styling
+
+TODO:
+- Ensure v0.5 was published
+- Continue with Tic-Tac-Toe improvements
+- Start adding content to the Family Scheduler page
+
+
 ## Feb 15, 2025
 
 - Happy enough with the Header style for now.
