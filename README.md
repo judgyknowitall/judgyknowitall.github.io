@@ -14,16 +14,23 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
+## May 10, 2025
+
+- Added styling and some content to the Family Scheduler page.
+
+TODO:
+- Continue with Tic-TAc-Toe improvements
+- Menu improvements: animation, styling, lander pages
+- Add Family Schedule Page content
+
 ## Feb 23, 2025
 
 - Worked on some of the Tic-Tac-Toe improvements
 - Improved Tic-Tac-Toe page styling
 
 TODO:
-- Ensure v0.5 was published
 - Continue with Tic-Tac-Toe improvements
 - Start adding content to the Family Scheduler page
-
 
 ## Feb 15, 2025
 

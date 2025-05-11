@@ -106,7 +106,7 @@ function GameHistory({currentMove, history, onJump}: HistoryProps) {
         {'Game History'}
         { isOrderReversed? <FaAngleUp/> : <FaAngleDown/> }
       </div>
-      <ol>{ isOrderReversed ? moveListView.reverse() : moveListView }</ol>
+      <ol reversed={isOrderReversed}>{ isOrderReversed ? moveListView.reverse() : moveListView }</ol>
     </>
   )
 }

@@ -41,12 +41,14 @@ Game History
     justify-content: start;
     color: var(--secondary-colour)
 }
+/* > = child*/
 .game-history-sort > svg {
     color: var(--secondary-colour);
     align-self: flex-end;
     padding: 5px;
     font-size: 80%;
 }
+/* ~ = sibling*/
 .game-history-sort ~ ol {
     margin-block-start: 0.5em;
 }

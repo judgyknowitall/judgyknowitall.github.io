@@ -1,0 +1,35 @@
+/**************************************
+Quote
+**************************************/
+.quote {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 6px;
+}
+.quote > div {
+    width: 1rem;
+    background-color: var(--text-faded);
+}
+.quote > p {
+    margin: 0 0 0 1rem;
+    font-style: italic;
+    color: var(--text-faded);
+    font-size: calc(10px + 1.5vmin);
+}
+
+/**************************************
+Google Certificate Link
+**************************************/
+.google-certificate {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.google-certificate > img {
+    height: 20px;
+}
+.google-certificate > a {
+    margin-left: 10px;
+    font-size: calc(10px + 1.5vmin);
+}
