@@ -14,6 +14,26 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
+## July 5, 2025
+
+- Improved the Menu thanks to Copilot.
+- Added more content to the Family Schedule page.
+
+TODO:
+- Component for viewing pics and pdfs in full screen.
+- Lander pages for Games, UX Design, etc.
+- Continue with Tic-Tac-Toe improvements
+- Add Family Schedule Page content
+
+## May 24, 2025
+
+- Added PDF reader to the Family Scheduler page.
+
+TODO:
+- Continue with Tic-Tac-Toe improvements
+- Menu improvements: animation, styling, lander pages
+- Add Family Schedule Page content
+
 ## May 10, 2025
 
 - Added styling and some content to the Family Scheduler page.

@@ -2,7 +2,7 @@
   --circleDiameter: 100px;
   --circleMargin: 10px;
   --menuItemDiameter: 80px;
-  --menuItemMargin: 2px;
+  --menuItemMargin: 10px;
 }
 
 .Header {
@@ -23,13 +23,6 @@
   font-weight: bold;
 }
 
-.spacer {
-  flex-grow: 0;
-  height: 0px;
-  width: var(--circleDiameter);
-  margin: 0px var(--circleMargin);
-}
-
 .menu-circle {
   flex-grow: 0;
   height: var(--circleDiameter);
@@ -37,6 +30,7 @@
   margin: var(--circleMargin);
   background-color: white;
   border-radius: 50%;
+  position: fixed;
 }
 
 .menu-logo {
@@ -54,17 +48,14 @@
   height: var(--circleDiameter);
   margin: var(--circleMargin);
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0px;
+  left: 0px;
   opacity: 0;
   transition: all 0.5s;
 }
 .menu:hover, 
 .menu.expand {
-  height:500px;
   opacity: 1;
 }
 
@@ -73,7 +64,9 @@
   border-radius: 50%;
   margin: var(--menuItemMargin);
   width: var(--menuItemDiameter);
-  height: 0px;
+  height: var(--menuItemDiameter);
+  position: fixed;
+  top:0px;
   align-content: center;
   text-align: center;
   transition: all 0.5s;
@@ -81,11 +74,15 @@
 .menu.expand .menu-item,
 .menu:hover .menu-item {
   height: var(--menuItemDiameter);
+  /* Only set top in expanded/hovered state */
+  top: calc(110px + var(--menu-item-index) * 90px);
 }
 
+/* Menu Hitbox */
 .menu-item.first {
   width: var(--circleDiameter) !important;
   height: var(--circleDiameter) !important;
+  margin: 0px;
   opacity: 0;
 }
 
