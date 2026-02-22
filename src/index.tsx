@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import reportWebVitals from './reportWebVitals';
 import WipPage from './views/pages/WipPage';
 import NotFoundPage from './views/pages/NotFoundPage';
-import FamilySchedulerPage from './views/pages/uxdesign/FamilySchedulerPager';
+import FamilySchedulerPage from './views/pages/uxdesign/FamilySchedulerPage';
 import TicTacToePage from './views/pages/games/TicTacToePage';
 import { InitPageProps } from './models/PageProps';
 

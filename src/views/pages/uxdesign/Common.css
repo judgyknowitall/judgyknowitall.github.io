@@ -4,17 +4,17 @@ Quote
 .quote {
     display: flex;
     flex-direction: row;
-    margin: 20px 6px;
+    margin: 5px 6px;
 }
 .quote > div {
-    width: 0.7rem;
+    width: 0.5rem;
     background-color: var(--text-faded);
 }
 .quote > p {
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 0.7rem;
     font-style: italic;
     color: var(--text-faded);
-    font-size: large;
+    font-size: medium;
 }
 
 /**************************************

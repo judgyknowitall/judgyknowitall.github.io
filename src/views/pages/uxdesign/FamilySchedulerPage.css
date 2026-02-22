@@ -16,10 +16,3 @@ img {
     height: auto;
     margin: 10px 0;
 }
-
-/*PDF viewer that scales the page, but doesn't keep quality.*/
-.react-pdf__Page__canvas {
-    margin: 10px 0;
-    width: 100% !important;
-    height: auto !important;
-}

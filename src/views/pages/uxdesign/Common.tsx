@@ -6,6 +6,10 @@ import "./Common.css";
 import { Link } from 'react-router';
 import GoogleLogo from '@/assets/google-logo-color.svg';
 
+/**
+ * Creates a quote element with the given quote text.
+ * @param quote The text of the quote to display. 
+ */
 export function Quote({quote} : {quote: string}) {
     return (
         <div className='quote'>
@@ -15,6 +19,9 @@ export function Quote({quote} : {quote: string}) {
     );
 }
 
+/**
+ * Creates a link to the Google UX Design Certificate page on Coursera, with the Google logo.
+ */
 export function GoogleCertificateLink() {
     return (
         <div className="google-certificate">

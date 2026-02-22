@@ -4,6 +4,8 @@
   --primary-colour: #fed7b0;
   --secondary-colour: rgb(175, 142, 208);
   --background-colour: rgb(255, 246, 246);
+  --success-colour: rgb(133, 202, 168);
+  --error-colour: rgb(206, 79, 79);
 }
 
 .app {
@@ -33,54 +35,37 @@
   width: 20%;
 }
 
-li {
+/* Portrait mode styles */
+@media (max-width: 700px), (orientation: portrait) {
+  .body-main {
+    padding: 5%;
+    margin: 5% 0px 0px 0px;
+    width: 80%;
+  }
+
+  .body-margin {
+    width: 5%;
+  }
+}
+
+li, a {
   color: var(--secondary-colour);
 }
 
 h4 {
   color: var(--secondary-colour);
   margin-bottom: 0rem;
-  font-size: x-large;
+  font-size: 1.1em;
+}
+
+h5 {
+  color: var(--text-colour);
+  margin-bottom: 0rem;
+  font-size: 0.8em;
 }
 
 p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
   font-size: medium;
-}
-
-/* Table styles */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th {
-  font-size: medium;
-  border: 1px solid var(--text-colour);
-  color: white;
-  background-color: var(--secondary-colour);
-  padding: 8px;
-}
-td {
-  text-align: left;
-  font-size: medium;
-  padding: 8px;
-  border: 1px solid var(--text-faded);
-}
-.withVerticalHeader tr td:first-child {
-  text-align: center;
-  font-weight: bold;
-}
-
-/* Portrait mode styles */
-
-.body-main.portrait {
-  padding: 5%;
-  margin: 5% 0px 0px 0px;
-  width: 80%;
-}
-
-.body-margin.portrait {
-  width: 5%;
 }

@@ -14,6 +14,18 @@ Go to https://judgyknowitall.github.io/ to view website.
 
 # Dev Logs
 
+## Feb 22, 2026
+
+- Improved Menu again for Mobile.
+- Added more content to the Family Schedule page.
+
+TODO:
+- Continue with Family Scheduler. Only have the last 2 sections left.
+- Update Menu to be more standard (e.g. hamburger menu) for mobile.
+- Component for viewing pics in full screen.
+- Lander pages for Games, UX Design, etc.
+- Continue with Tic-Tac-Toe improvements
+
 ## July 5, 2025
 
 - Improved the Menu thanks to Copilot.

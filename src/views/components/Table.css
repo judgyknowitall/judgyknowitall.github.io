@@ -1,0 +1,46 @@
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+th {
+  font-size: small;
+  border: 1px solid var(--text-colour);
+  color: white;
+  background-color: var(--secondary-colour);
+  padding: 8px;
+}
+td {
+  text-align: left;
+  font-size: small;
+  padding: 8px;
+  border: 1px solid var(--text-faded);
+}
+.withVerticalHeader tr td:first-child {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive table wrapper: wrap your table in a div.table-container
+   to enable horizontal scrolling on small screens */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-container table {
+  width: 100%;
+  /* Keep the table at its natural width so it can scroll when needed */
+  min-width: max-content;
+}
+
+/* Limit each cell's width and show ellipsis when content overflows.
+   Adjust --table-cell-max to change the maximum width. */
+.table-container th,
+.table-container td {
+  max-width: 100px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+  hyphens: auto;
+}
